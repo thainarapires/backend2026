@@ -78,7 +78,58 @@ tjd
 bete
 */
 
+?>
 
+<hr>
+
+<?php 
+//Manipulção de arrays
+
+
+$nomes=["Fulano","Beltrano","Sicrano", "Astrogildo"];
+$total = count($nomes);//4
+echo "Foram encontradas $total nomes no array.<br>";
+echo "Primeiro valor do array: ".$nomes[0]."<br>";
+echo "Último valor do array: ".$nomes[count($nomes)-1];//astrogildo
+echo "<hr>";
+for($i=0;$i<count($nomes);$i++){
+	echo $nomes[$i]."<br>";
+}
+/* 
+fulano
+beltrano
+sicrano
+astrogildo
+*/
+?>
+<hr>
+
+<?php
+$uf=["SP","RJ","ES","MG"];
+echo "<pre>";print_r($uf);echo "</pre>";
+array_push($uf, "TO");
+array_push($uf, "BA");
+array_push($uf, "RN");//6 so vai fica esse
+array_push($uf, "PR");
+array_pop($uf);
+echo "<pre>";print_r($uf);echo "</pre>";
+sort($uf);
+echo "<pre>";print_r($uf);echo "</pre>";
+?>
+<hr>
+
+<?php
+//Foreach
+$estudante=[
+    "id"=> 1,
+    "nome"=>"bete",
+    "nota"=>9.5
+];
+foreach($uf as $pos=>$valor){
+    echo "<br>$pos : $valor";
+
+}
 
 
 ?>
+
